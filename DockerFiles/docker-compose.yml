@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+    postgres-ki-service:
+        image: postgres # this will be pulled from hub.docker.com
+        ports:
+            - '5432:5432'
+        environment:
+            # - name=value
+            POSTGRES_USERS:postgres
+
+    redis: image:redis
+    ports:
+        - '6379:6379'

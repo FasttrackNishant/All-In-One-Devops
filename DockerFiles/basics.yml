@@ -1,0 +1,39 @@
+#comments
+
+# if single entry is there then this is allowed
+
+# name: "Raju Rastogi"
+# age: 23
+# passed: true
+# subjects:  #Subject list
+#   - Math
+#   - English
+# marks:
+#   Math: 90
+#   English: 80
+
+# if there are multiple entries of the same values
+
+
+students:
+  student1:
+      name: 'Sham'
+      age: 12
+      passed: true
+      subjects: #Subject list
+          - Math
+          - English
+      marks:
+          Math: 90
+          English: 80
+  
+  student2:
+      name: 'Sham'
+      age: 12
+      passed: true
+      subjects: #Subject list
+          - Math
+          - English
+      marks:
+          Math: 90
+          English: 80
