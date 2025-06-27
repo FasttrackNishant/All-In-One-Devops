@@ -1,0 +1,38 @@
+trigger: main
+
+stages:
+- stage: Build
+  jobs:
+  - job: Build
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+    - task: Npm@1
+      inputs:
+        command: 'install'
+    
+    - task: Npm@1
+      inputs:
+        command: 'run build'
+        
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: 'build'
+        ArtifactName: 'drop'
+        publishLocation: 'Container'
+
+- stage: Deploy
+  jobs:
+  - job: Deploy
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps: 
+    - task: AzureRmWebAppDeployment@5
+      inputs:
+        ConnectionType: 'AzureRM'
+        azureSubscription: 'Azure-Students'
+        appType: 'webAppLinux'
+        WebAppName: 'ytclonedevnishant'
+        packageForLinux: '$(System.DefaultWorkingDirectory)/build'
+        RuntimeStack: 'NODE|20-lts'
+        DeploymentTypeLinux: 'oneDeploy'
