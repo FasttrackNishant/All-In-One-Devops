@@ -1,0 +1,4 @@
+docker multi stage build
+
+i dont want heavy image size want lower image size
+
