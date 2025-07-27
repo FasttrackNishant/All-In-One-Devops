@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: deploy-express
+  name: deploy-express
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: deploy-express
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: deploy-express
+    spec:
+      containers:
+      - image: devnishant063/express-app:latest
+        name: express-app
+        ports:
+        - containerPort: 3000

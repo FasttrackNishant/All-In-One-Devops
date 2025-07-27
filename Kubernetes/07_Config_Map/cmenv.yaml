@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+data:
+  first: nishant
+  second: dev
+metadata:
+  name: sample-cm

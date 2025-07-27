@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: deploy-shopping
+  name: deploy-shopping
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: deploy-shopping
+  template:
+    metadata:
+      labels:
+        app: deploy-shopping
+    spec:
+      containers:
+      - image: devnishant063/shopping-client
+        name: shooping-client
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000
+      imagePullSecrets: 
+        - name : sample-docker-secret2
