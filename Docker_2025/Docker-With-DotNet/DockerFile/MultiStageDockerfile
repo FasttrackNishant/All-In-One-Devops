@@ -1,0 +1,45 @@
+#  First Pull from the hub
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+
+# user for the processsing
+USER app
+WORKDIR /app
+EXPOSE 8080
+EXPOSE 8081
+
+
+# second docker image
+
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+
+# temp variables
+
+ARG BUILD_CONFIGURATION=Release
+
+# workdir 
+WORKDIR /src
+
+COPY ["ProductsMicroService.API/ProductsMicroService.API.csproj", "ProductsMicroService.API/"]
+
+RUN dotnet restore "./ProductsMicroService.API/./ProductsMicroService.API.csproj"
+
+COPY . .
+
+WORKDIR "/src/ProductsMicroService.API"
+RUN dotnet build "./ProductsMicroService.API.csproj" -c $BUILD_CONFIGURATION -o /app/build
+
+# till this we have build the solution
+
+# now lets publish the file
+FROM build AS publish
+ARG BUILD_CONFIGURATION=Release
+RUN dotnet publish "./ProductsMicroService.API.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+
+# this use app host tells that we are not normally running the application insted we will use some other method
+
+
+# now here we will create just required files docker image as we need only publish folder
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "ProductsMicroService.API.dll"]
