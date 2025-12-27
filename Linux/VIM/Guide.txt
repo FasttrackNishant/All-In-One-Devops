@@ -1,0 +1,127 @@
+# VIM QUICK GUIDE & SHORTCUTS
+
+## MODES
+
+Normal  : default mode (navigation & commands)
+Insert  : type text
+Visual  : select text
+Command : after :
+Replace : overwrite text
+
+Press Esc anytime to go to Normal mode.
+
+## BASIC INSERT
+
+i   insert before cursor
+I   insert at line start
+a   append after cursor
+A   append at line end
+o   open new line below
+O   open new line above
+R   replace mode
+
+## NAVIGATION
+
+h j k l   left, down, up, right
+w         next word
+b         previous word
+0         start of line
+^         first non-space char
+$         end of line
+gg        go to top
+G         go to bottom
+:n        go to line n
+Ctrl+d    half page down
+Ctrl+u    half page up
+
+## DELETE / COPY / PASTE
+
+x     delete character
+dd    delete line
+dw    delete word
+d$    delete to end of line
+yy    yank (copy) line
+yw    yank word
+p     paste after cursor
+P     paste before cursor
+u     undo
+Ctrl+r redo
+
+Use with numbers:
+5dd   delete 5 lines
+3w    move 3 words
+
+## CHANGE
+
+cc    change line
+cw    change word
+c$    change to end of line
+
+## SEARCH
+
+/text   search forward
+?text   search backward
+n       next match
+N       previous match
+
+## REPLACE
+
+:%s/old/new/g     replace all
+:%s/old/new/gc    replace with confirm
+
+## VISUAL MODE
+
+v       visual (char)
+V       visual (line)
+Ctrl+v  visual block
+Then use d, y, c on selection.
+
+## SAVE / QUIT (Command Mode)
+
+:w      save
+:q      quit
+:wq     save & quit
+:x      save & quit
+:q!     quit without saving
+:w!     force save
+
+## FILES & WINDOWS
+
+:e file     open file
+:r file     insert file
+:ls         list buffers
+:b n        go to buffer n
+:bd         close buffer
+:sp file    horizontal split
+:vsp file   vertical split
+Ctrl+w w    switch window
+Ctrl+w q    close window
+
+## INDENT & FORMAT
+
+> > ```
+> >  indent line
+> > ```
+
+<<      unindent line
+=       auto indent (visual)
+J       join lines
+.       repeat last command
+~       toggle case
+
+## HELP
+
+:help
+:help command
+
+## SURVIVAL COMMANDS
+
+i        insert
+Esc      normal
+:wq      save & quit
+:q!      quit without save
+dd       delete line
+yy / p   copy / paste
+/text    search
+
+# END
