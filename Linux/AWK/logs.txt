@@ -1,0 +1,21 @@
+date       time     level   service   ip_address      user     action     bytes
+
+2025-12-28   08:01:10 INFO    auth      10.0.0.5        nishant  login      120
+2025-12-28   08:02:15 ERROR   auth      10.0.0.8        rahul    login      0
+2025-12-28   08:03:22 INFO    api       10.0.0.5        nishant  getData    560
+2025-12-28   08:04:45 WARN    api       10.0.0.9        ankit    getData    430
+2025-12-28   08:05:01 INFO    db        10.0.0.7        nishant  query      1024
+2025-12-28   08:06:33 ERROR   api       10.0.0.5        nishant  update     0
+2025-12-28   08:07:10 INFO    auth      10.0.0.6        priya    login      115
+2025-12-28   08:08:59 INFO    api       10.0.0.8        rahul    getData    600
+2025-12-28   08:09:44 WARN    db        10.0.0.9        ankit    query      900
+2025-12-28   08:10:21 INFO    api       10.0.0.5        nishant  getData    700
+2025-12-28   08:11:05 ERROR   db        10.0.0.7        nishant  query      0
+2025-12-28   08:12:42 INFO    auth      10.0.0.8        rahul    logout     50
+2025-12-28   08:13:18 INFO    api       10.0.0.6        priya    getData    620
+2025-12-28   08:14:55 WARN    api       10.0.0.5        nishant  update     300
+2025-12-28   08:15:37 INFO    db        10.0.0.9        ankit    query      1100
+2025-12-28   08:16:49 ERROR   auth      10.0.0.6        priya    login      0
+2025-12-28   08:17:30 INFO    api       10.0.0.7        nishant  getData    650
+2025-12-28   08:18:11 INFO    auth      10.0.0.5        nishant  logout     60
+2025-12-28   08:19:44 WARN    db        10.0.0.8        rahul    query      850

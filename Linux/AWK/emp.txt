@@ -1,0 +1,23 @@
+iid first_name last_name designation        department   salary
+
+1  Nishant     Kumar     SoftwareEngineer   IT           75000
+2  Rahul       Sharma    DevOpsEngineer     IT           82000
+3  Priya       Singh     DataAnalyst        Data         68000
+4  Ankit       Verma     QAEngineer         IT           60000
+5  Amit        Patel     ProjectManager    Management   95000
+6  Neha        Gupta     HRExecutive        HR           50000
+7  Rohit       Mehta     BackendDeveloper   IT           78000
+8  Sneha       Iyer      FrontendDeveloper  IT           72000
+9  Verma       Jain      SystemAdmin        IT           70000
+10 Pooja       Nair      BusinessAnalyst    Business     74000
+11 Karan       Malhotra  DevOpsEngineer     IT           85000
+12 Simran      Kaur      DataScientist      Data         98000
+13 Arjun       Reddy     CloudEngineer      IT           90000
+14 Mehul       Shah      DatabaseAdmin     IT           83000
+15 Riya        Choudhary UIUXDesigner       Design       65000
+16 Sandeep     Yadav     SupportEngineer    Support      48000
+17 Ayesha      Khan      HRManager          HR           88000
+18 Manoj       Tripathi  TechLead           IT           105000
+19 Ishita      Bose      ProductOwner       Management   99000
+20 Deepak      Rawat     Intern             IT           30000
+
