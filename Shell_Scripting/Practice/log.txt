@@ -1,0 +1,17 @@
+2026-01-01 10:01:23 INFO user=dev action=login ip=192.168.1.10 status=SUCCESS
+2026-01-01 10:02:11 INFO user=admin action=login ip=192.168.1.11 status=FAILED
+2026-01-01 10:03:45 WARN user=dev action=upload file=report.pdf size=2048
+2026-01-01 10:04:02 ERROR user=guest action=access resource=/admin ip=10.0.0.5
+2026-01-01 10:05:55 INFO user=dev action=logout ip=192.168.1.10
+2026-01-01 10:06:12 INFO user=admin action=login ip=192.168.1.11 status=SUCCESS
+2026-01-01 10:07:01 INFO user=dev action=login ip=192.168.1.10 status=SUCCESS
+2026-01-01 10:07:59 WARN disk=/dev/sda1 usage=85%
+2026-01-01 10:08:30 WARN disk=/dev/sda1 usage=92%
+2026-01-01 10:09:12 ERROR service=nginx msg="connection timeout"
+2026-01-01 10:10:45 INFO user=guest action=login ip=10.0.0.5 status=FAILED
+2026-01-01 10:11:20 INFO user=admin action=delete user=guest
+2026-01-01 10:12:55 WARN memory usage=78%
+2026-01-01 10:13:40 WARN memory usage=88%
+2026-01-01 10:14:10 ERROR service=db msg="disk full"
+2026-01-01 10:15:33 INFO user=dev action=upload file=data.csv size=4096
+2026-01-01 10:16:18 INFO user=admin action=logout
